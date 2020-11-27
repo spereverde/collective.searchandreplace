@@ -1,6 +1,5 @@
 import pytest
 import requests
-import pathlib2 as pathlib
 from zope_instance import ZopeInstance
 
 

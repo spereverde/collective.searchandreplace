@@ -381,7 +381,6 @@ class TestReplaceWhere(unittest.TestCase):
         self.assertEqual(getRawText(doc1), "My <em>Test</em> Case")
 
     def testDoNotFindSubject(self):
-        # from collective.searchandreplace.searchreplaceutility import getRawText
 
         setRoles(self.portal, TEST_USER_ID, ["Manager"])
         self.portal.invokeFactory("Document", "doc1")
@@ -399,7 +398,6 @@ class TestReplaceWhere(unittest.TestCase):
         self.assertEqual(len(results), 0)
 
     def testReplaceSubject(self):
-        from collective.searchandreplace.searchreplaceutility import getRawText
 
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ISearchReplaceSettings, check=False)
@@ -431,7 +429,6 @@ class TestReplaceWhere(unittest.TestCase):
         self.assertEqual(doc1.Title(), "Find Title")
 
     def testReplaceSubjectSecondItem(self):
-        from collective.searchandreplace.searchreplaceutility import getRawText
 
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ISearchReplaceSettings, check=False)
@@ -465,7 +462,6 @@ class TestReplaceWhere(unittest.TestCase):
         self.assertEqual(doc1.Title(), "Find Title")
 
     def testReplaceSubjectTwiceInThirdItem(self):
-        from collective.searchandreplace.searchreplaceutility import getRawText
 
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ISearchReplaceSettings, check=False)
@@ -503,7 +499,6 @@ class TestReplaceWhere(unittest.TestCase):
         self.assertEqual(doc1.Title(), "Find Title")
 
     def testReplaceSubjectUnicode(self):
-        from collective.searchandreplace.searchreplaceutility import getRawText
 
         registry = getUtility(IRegistry)
         settings = registry.forInterface(ISearchReplaceSettings, check=False)
